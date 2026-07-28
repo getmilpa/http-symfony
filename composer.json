@@ -1,0 +1,35 @@
+{
+  "name": "milpa/http-symfony",
+  "description": "Symfony HttpFoundation adapter for the Milpa PHP framework: the HTTP response value objects and the base controller a host's routing invokes.",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Rodrigo Vicente - TeamX Agency",
+      "homepage": "https://teamx.agency"
+    }
+  ],
+  "require": {
+    "php": ">=8.3",
+    "symfony/http-foundation": "^7.4",
+    "milpa/core": "^0.6",
+    "milpa/http": "^0.1.5",
+    "psr/log": "^3.0"
+  },
+  "require-dev": {
+    "phpstan/phpdoc-parser": "^2.3",
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Milpa\\Http\\Symfony\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Milpa\\Http\\Symfony\\Tests\\": "tests/",
+      "Milpa\\Docs\\": "vendor/milpa/core/tools/gen-docs/"
+    }
+  }
+}
