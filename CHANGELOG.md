@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/getmilpa/http-symfony/compare/v0.1.0...v0.1.1) (2026-08-01)
+
+
+### Bug Fixes
+
+* **deps:** el pin de milpa/core acepta la linea 0.7 ([4af5168](https://github.com/getmilpa/http-symfony/commit/4af516834219a4db118baee962023121733c3c97))
+
 ## 0.1.0 (2026-07-28)
 
 
