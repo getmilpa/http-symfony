@@ -56,6 +56,11 @@ final class HealthController extends BaseController
 }
 ```
 
+The `#[Route]` attribute and `HttpMethod` in that example come from
+[`milpa/http`](https://packagist.org/packages/milpa/http), which this package does **not** require —
+see [Requirements](#requirements). A host that routes with it already has it; the controller base
+class and the responses below work the same without it.
+
 ## What is NOT here, and why
 
 **View rendering.** A responder that turns a template into a response needs a template engine, and
@@ -70,9 +75,16 @@ host-side until the engine earns its own release.
 
 - PHP **≥ 8.3**
 - [`symfony/http-foundation`](https://packagist.org/packages/symfony/http-foundation) **^7.4**
-- [`milpa/core`](https://packagist.org/packages/milpa/core) **^0.6**
-- [`milpa/http`](https://packagist.org/packages/milpa/http) **^0.1.5**
+- [`milpa/core`](https://packagist.org/packages/milpa/core) **>=0.6.2 <1.0**
 - [`psr/log`](https://packagist.org/packages/psr/log) **^3.0**
+
+**`milpa/http` is not one of them**, and that is the point of the split. This package is the other
+half of the sentence, not a layer on top of it: the router describes *where a request goes*, these
+classes are *what the controller hands back*, and no line here implements, extends or imports any
+contract of `milpa/http` — its interfaces (`RouterInterface`, `HandlerResolverInterface`,
+`MiddlewareResolverInterface`, `UrlGeneratorInterface`) are PSR-7/PSR-15 seams a host kernel fills,
+and it declares nothing at all about responses. A host that routes with `milpa/http` requires it
+directly; a host that routes some other way pays nothing for it here.
 
 ## Contributing
 
