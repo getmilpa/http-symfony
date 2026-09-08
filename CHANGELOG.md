@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/getmilpa/http-symfony/compare/v0.2.2...v0.2.3) (2026-09-08)
+
+
+### Bug Fixes
+
+* **deps:** drop the milpa/http requirement this adapter never uses ([#9](https://github.com/getmilpa/http-symfony/issues/9)) ([a37d097](https://github.com/getmilpa/http-symfony/commit/a37d0970e6d4025e693d512f8835474af4459199))
+
 ## [0.1.1](https://github.com/getmilpa/http-symfony/compare/v0.1.0...v0.1.1) (2026-08-01)
 
 
